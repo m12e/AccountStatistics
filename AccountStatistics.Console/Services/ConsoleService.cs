@@ -111,11 +111,13 @@ $@"Программа запрашивает идентификаторы уче
 				if (lastPosts == null)
 				{
 					SysConsole.WriteLine(ACCOUNT_OR_GROUP_NOT_FOUND_MESSAGE);
+					SysConsole.WriteLine();
 					continue;
 				}
 				if (lastPosts.Count == 0)
 				{
 					SysConsole.WriteLine(NO_POSTS_MESSAGE);
+					SysConsole.WriteLine();
 					continue;
 				}
 				var joinedPosts = string.Join(string.Empty, lastPosts);
