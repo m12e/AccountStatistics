@@ -95,7 +95,16 @@ namespace AccountStatistics.Infrastructure.Services
 				Count = postsCount,
 				Filter = WallFilter.Owner
 			};
-			var wallGetObject = VkApi.Wall.Get(wallGetParams);
+
+			WallGetObject wallGetObject;
+			try
+			{
+				wallGetObject = VkApi.Wall.Get(wallGetParams);
+			}
+			catch (VkApiException)
+			{
+				return null;
+			}
 
 			return wallGetObject
 				.WallPosts
