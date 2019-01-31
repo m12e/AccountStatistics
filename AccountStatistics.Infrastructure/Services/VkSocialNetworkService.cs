@@ -26,7 +26,7 @@ namespace AccountStatistics.Infrastructure.Services
 		/// <summary>
 		/// Идентификатор группы, в которой будут создаваться посты
 		/// </summary>
-		private const string GROUP_ID = "club177315586";
+		private const string GROUP_ID = "";
 
 		private static readonly VkApi VkApi = new VkApi();
 
